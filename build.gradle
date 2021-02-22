@@ -1,0 +1,22 @@
+plugins {
+	id 'java'
+}
+
+group = 'com.dcierco'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '14'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation group: 'org.testng', name: 'testng', version: '7.3.0'
+	implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+	implementation group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '4.0.0-beta-1'
+}
+
+test {
+     useTestNG() {
+    }
+}
