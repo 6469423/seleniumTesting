@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HomePageObject {
 
-    private WebDriver browser;
+    private final WebDriver browser;
 
     public HomePageObject(){
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");

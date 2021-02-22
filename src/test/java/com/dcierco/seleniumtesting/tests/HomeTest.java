@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
-public class HomePageTest{
+public class HomeTest {
 
     private HomePageObject homePageObject;
 
