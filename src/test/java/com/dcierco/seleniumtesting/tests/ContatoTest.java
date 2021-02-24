@@ -21,7 +21,7 @@ public class ContatoTest {
 
     @Test
     public void deveriaSerURLContato(){
-        Assert.assertEquals(contatoPageObject.getUrl(), "https://www.dbserver.com.br/contato");
+        Assert.assertEquals(contatoPageObject.getUrl(), "https://www.dbserver.com.br/contato.html");
     }
 
     @Test
