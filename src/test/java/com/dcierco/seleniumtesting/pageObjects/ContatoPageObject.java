@@ -35,7 +35,7 @@ public class ContatoPageObject {
     }
 
     public String getEndereco(){
-        return browser.findElement(By.xpath("//*[@id='voltarTopo']/div[7]/div/div[2]/ul/li[1]/p[1]/text()")).getText();
+        return browser.findElement(By.xpath("//*[@id='voltarTopo']/div[7]/div/div[2]/ul/li[1]/p[1]")).getText();
     }
 
 

@@ -27,7 +27,14 @@ public class HomeTest {
 
     @Test
     public void deveriaTerEndereco(){
-        Assert.assertEquals(homePageObject.getEndereco(), "Endereço: Av. Ipiranga, 6681 - Tecnopuc - Prédio 99 A - 5º Andar | CEP 90619-900 | Bairro Partenon | Porto Alegre | RS | Brasil");
+        String endereco =  "Endereço: Av. Ipiranga, 6681 - Tecnopuc - Prédio 99 A - 5º Andar | CEP 90619-900 | Bairro Partenon | Porto Alegre | RS | Brasil"; //para corrigir problema de encoding UTF-8
+        try {
+            byte[] b = endereco.getBytes("UTF-8");
+            endereco = new String(b, "UTF-8");
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+        Assert.assertEquals(homePageObject.getEndereco(), endereco);
     }
 
     @Test

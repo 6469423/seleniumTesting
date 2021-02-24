@@ -1,5 +1,6 @@
 package com.dcierco.seleniumtesting.tests;
 
+import java.nio.charset.StandardCharsets;
 import com.dcierco.seleniumtesting.pageObjects.ContatoPageObject;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -26,7 +27,10 @@ public class ContatoTest {
 
     @Test
     public void deveriaTerEndereco(){
-        Assert.assertEquals(contatoPageObject.getEndereco(), " Av. Ipiranga, 6681 - Tecnopuc - Prédio 99A - 5º Andar | CEP 90619-900 | Bairro Partenon | RS | Porto Alegre | Brasil |");
+        String endereco =  "Endereço: Av. Ipiranga, 6681 - Tecnopuc - Prédio 99A - 5º Andar | CEP 90619-900 | Bairro Partenon | RS | Porto Alegre | Brasil |"; //para corrigir problema de encoding UTF-8
+        byte[] bytes = endereco.getBytes(StandardCharsets.UTF_8);
+        String utf8endereco = new String(bytes, StandardCharsets.UTF_8);
+        Assert.assertEquals(contatoPageObject.getEndereco(), utf8endereco);
     }
 
     @Test
